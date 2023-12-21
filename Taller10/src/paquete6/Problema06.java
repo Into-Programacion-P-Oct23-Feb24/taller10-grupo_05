@@ -10,5 +10,27 @@ package paquete6;
  * @author reroes
  */
 public class Problema06 {
-    
+
+    public static void main(String[] args) {
+        int inicial;
+        String cadena = "";
+        String[][] estudiantes = {{"Sarah Ward", "Philip Payne"},
+        {"Carrie Burton", "Lauren Rice"},
+        {"Emma Escobar", "Lori Flores"},
+        {"Steven West", "Toni Martin"}};
+        for (int i = 0; i < estudiantes.length; i++) {
+            for (int j = 0; j < estudiantes[i].length; j++) {
+
+                inicial = estudiantes[i][j].length();
+                switch (inicial) {
+                    case 11:
+                        cadena = String.format("%s%s\n", cadena, estudiantes[i][j]);
+
+                    default:
+                        break;
+                }
+            }
+        }
+        System.out.printf("%s", cadena);
+    }
 }
